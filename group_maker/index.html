@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>조 뽑기</title>
+	<script src="main.js"></script>
+</head>
+<body>
+	<link rel="stylesheet" href="main.css">
+	<p class="show_random"></p>
+	<table style="width:100%">
+		<tr>
+			<td>1모둠</td>
+			<td id="std1-1"></td>
+			<td id="std1-2"></td>
+			<td id="std1-3"></td>
+			<td id="std1-4"></td>
+			
+		</tr>
+		<tr>
+			<td>2모둠</td>
+			<td id="std2-1"></td>
+			<td id="std2-2"></td>
+			<td id="std2-3"></td>
+			<td id="std2-4"></td>
+		</tr>
+		<tr>
+			<td>3모둠</td>
+			<td id="std3-1"></td>
+			<td id="std3-2"></td>
+			<td id="std3-3"></td>
+			<td id="std3-4"></td>
+		</tr>
+		<tr>
+			<td>4모둠</td>
+			<td id="std4-1"></td>
+			<td id="std4-2"></td>
+			<td id="std4-3"></td>
+			<td id="std4-4"></td>
+		</tr>
+		<tr>
+			<td>5모둠</td>
+			<td id="std5-1"></td>
+			<td id="std5-2"></td>
+			<td id="std5-3"></td>
+			<td id="std5-4"></td>
+		</tr>
+		<tr>
+			<td>6모둠</td>
+			<td id="std6-1"></td>
+			<td id="std6-2"></td>
+			<td id="std6-3"></td>
+			<td id="std6-4"></td>
+		</tr>
+		<tr>
+			<td>7모둠</td>
+			<td></td>
+			<td id="std7-1"></td>	
+			<td id="std7-3"></td>
+			<td id="std7-4"></td>
+		</tr>
+	</table>
+	<button onclick="window.location.reload()">바꾸기</button>
+	<script>
+		
+		girltable1 = [0,2,4,6,8,10,12];
+		girltable2 =  [1,3,5,7,9,11,13];
+		for(i=0;i<13;i++){
+			if(student14() == i){
+				try{
+					document.getElementById('std'+String(Math.floor((i)/2)+1)+'-1').innerHTML= random12[i]
+					document.getElementById('std'+String(Math.floor((i)/2)+1)+'-1').style.color="blue";
+				}catch(e){
+					document.getElementById('std'+String(Math.floor((i)/2)+1)+'-2').innerHTML= random12[i-1]
+					document.getElementById('std'+String(Math.floor((i)/2)+1)+'-2').style.color="blue"
+				}
+			
+			}else{
+				document.getElementById('std'+String(Math.floor((i)/2)+1)+'-1').innerHTML= random12[i]
+				document.getElementById('std'+String(Math.floor((i)/2)+1)+'-1').style.color="red"	
+			}	
+			if(Math.floor((i)/2)+1 == 7){
+		
+			}else{
+				switch (student14) {
+					case i:
+						try{
+							document.getElementById('std'+String(Math.floor((i)/2)+1)+'-1').innerHTML= random12[i]
+							document.getElementById('std'+String(Math.floor((i)/2)+1)+'-1').style.color="blue";
+						}catch(e){
+							document.getElementById('std'+String(Math.floor((i)/2)+1)+'-2').innerHTML= random12[i-1]
+							document.getElementById('std'+String(Math.floor((i)/2)+1)+'-2').style.color="blue"
+						}
+						break;
+				
+					default:
+						document.getElementById('std'+String(Math.floor((i)/2)+1)+'-2').innerHTML= random12[i-1]
+						document.getElementById('std'+String(Math.floor((i)/2)+1)+'-2').style.color="red"
+						break;
+				}	
+						
+				
+				
+			}
+			switch(student14()){
+	case 0:
+		document.getElementById("std1-2").style.color="blue";
+		break;
+
+	case 2:
+		document.getElementById("std2-2").style.color="blue";
+		break;
+
+	case 4:
+		document.getElementById("std3-2").style.color="blue";
+		break;
+
+	case 6:
+		document.getElementById("std4-2").style.color="blue";
+		break;
+
+	case 8:
+		document.getElementById("std5-2").style.color="blue";
+		break;
+
+	case 10:
+		document.getElementById("std6-2").style.color="blue";
+	break;
+}
+
+			
+				
+		}
+		for(i=0;i<14;i++){
+			document.getElementById('std'+String(Math.floor((i)/2)+1)+'-3').innerHTML= random34[i]
+			document.getElementById('std'+String(Math.floor((i)/2)+1)+'-3').style.color="blue";
+			document.getElementById('std'+String(Math.floor((i)/2)+1)+'-4').innerHTML= random34[i-1] 
+			document.getElementById('std'+String(Math.floor((i)/2)+1)+'-4').style.color="blue";
+		}
+	</script>
+</body>
+</html>
